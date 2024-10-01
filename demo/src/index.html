@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PhotoSwipe Video Plugin Demo</title>
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe/dist/default-skin/default-skin.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .photoswipe-wrapper .photoswipe-item {
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 23%;
+            margin-right: 1%;
+        }
+        .photoswipe-wrapper .photoswipe-item:nth-child(4n) {
+            margin-right: 0;
+        }
+        .photoswipe-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>PhotoSwipe Video Plugin Demo</h1>
+<div class="photoswipe-wrapper">
+    <!-- Image Item -->
+    <div class="photoswipe-item">
+        <a href="https://www.w3schools.com/css/img_fjords.jpg" data-pswp-width="1024" data-pswp-height="768" data-pswp-type="image">
+            <img src="https://www.w3schools.com/css/img_fjords.jpg" alt="Image description">
+        </a>
+    </div>
+
+    <!-- Image Item -->
+    <div class="photoswipe-item">
+        <a href="https://www.nasa.gov/wp-content/uploads/2024/08/grc-1961-c-57748-orig.jpg" data-pswp-width="1024" data-pswp-height="768" data-pswp-type="image">
+            <img src="https://www.nasa.gov/wp-content/uploads/2024/08/grc-1961-c-57748-orig.jpg" alt="Image description">
+        </a>
+    </div>
+
+    <!-- Image Item -->
+    <div class="photoswipe-item">
+        <a href="https://www.nasa.gov/wp-content/uploads/2024/08/iss065e241659.jpg" data-pswp-width="1024" data-pswp-height="768" data-pswp-type="image">
+            <img src="https://www.nasa.gov/wp-content/uploads/2024/08/iss065e241659.jpg" alt="Image description">
+        </a>
+    </div>
+
+    <!-- Image Item -->
+    <div class="photoswipe-item">
+        <a href="https://www.nasa.gov/wp-content/uploads/2024/06/gsfc-20171208-archive-e001885orig.jpg" data-pswp-width="1024" data-pswp-height="768" data-pswp-type="image">
+            <img src="https://www.nasa.gov/wp-content/uploads/2024/06/gsfc-20171208-archive-e001885orig.jpg" alt="Image description">
+        </a>
+    </div>
+
+
+<!--    &lt;!&ndash; YouTube Video Item &ndash;&gt;-->
+<!--    <div class="photoswipe-item">-->
+<!--        <a href="https://www.youtube.com/watch?v=iP2JGliTdvw" data-pswp-width="960" data-pswp-height="640" data-pswp-type="youtube">-->
+<!--            <img src="http://placehold.it/960x640?text=YouTube" alt="YouTube Video">-->
+<!--        </a>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Vimeo Video Item &ndash;&gt;-->
+<!--    <div class="photoswipe-item">-->
+<!--        <a href="https://vimeo.com/121436114" data-pswp-width="960" data-pswp-height="640" data-pswp-type="vimeo">-->
+<!--            <img src="http://placehold.it/960x640?text=Vimeo" alt="Vimeo Video">-->
+<!--        </a>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; MP4 Video Item &ndash;&gt;-->
+<!--    <div class="photoswipe-item">-->
+<!--        <a href="videos/demo2.mp4" data-pswp-width="960" data-pswp-height="640" data-pswp-type="video">-->
+<!--            <img src="http://placehold.it/960x640?text=MP4" alt="MP4 Video">-->
+<!--        </a>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; MOV Video Item &ndash;&gt;-->
+<!--    <div class="photoswipe-item">-->
+<!--        <a href="videos/demo1.mov" data-pswp-width="960" data-pswp-height="640" data-pswp-type="video">-->
+<!--            <img src="http://placehold.it/960x640?text=MOV" alt="MOV Video">-->
+<!--        </a>-->
+<!--    </div>-->
+
+</div>
+
+<!-- PhotoSwipe Core Structure -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include the bundled JavaScript -->
+<script src="dist/bundle.js"></script>
+</body>
+</html>
