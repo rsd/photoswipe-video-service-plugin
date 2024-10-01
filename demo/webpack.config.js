@@ -20,6 +20,13 @@ module.exports = {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[hash][ext][query]',
+                },
+            },
         ],
     },
     devServer: {
@@ -27,7 +34,7 @@ module.exports = {
             directory: path.join(__dirname, 'src'), // Replaces contentBase
         },
         port: 9000,
-        open: true,
+        open: false,
         compress: true,
     },
     resolve: {
