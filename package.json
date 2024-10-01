@@ -1,15 +1,17 @@
 {
   "name": "photo-swipe-youtube-plugin",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production --config webpack.config.js"
   },
   "private": true,
   "keywords": [],
-  "author": "",
+  "author": "Raul Dias",
+  "emaik": "raul@dias.com.br",
   "license": "ISC",
-  "description": "",
+  "description": "A PhotoSwipe Plugin for Youtube Videos",
   "dependencies": {
     "photoswipe": "^5.4.4"
   },
