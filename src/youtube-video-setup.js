@@ -11,9 +11,9 @@ class YoutubeVideoSetup{
         this.playerCounter = {};
 
         this.initLightboxEvents(lightbox);
-        // lightbox.on('init', () => {
-        //     this.initPswpEvents(lightbox.pswp);
-        // });
+        lightbox.on('init', () => {
+            this.initPswpEvents(lightbox.pswp);
+        });
     }
 
     initLightboxEvents(lightbox) {
@@ -44,22 +44,6 @@ class YoutubeVideoSetup{
     }
 
     initPswpEvents(pswp) {
-        pswp.on('pointerDown', (e) => {
-            const slide = pswp.currSlide;
-            if (isYoutubeContent(slide) && this.options.preventDragOffset) {
-                const origEvent = e.originalEvent;
-                if (origEvent.type === 'pointerdown') {
-                    const videoHeight = Math.ceil(slide.height * slide.currZoomLevel);
-                    const verticalEnding = videoHeight + slide.bounds.center.y;
-                    const pointerYPos = origEvent.pageY - pswp.offset.y;
-                    if (pointerYPos > verticalEnding - this.options.preventDragOffset
-                        && pointerYPos < verticalEnding) {
-                        e.preventDefault();
-                    }
-                }
-            }
-        });
-
         pswp.on('appendHeavy', (e) => {
             if (isYoutubeContent(e.slide) && !e.slide.isActive) {
                 e.preventDefault();
@@ -143,18 +127,10 @@ class YoutubeVideoSetup{
         }
     }
 
-    // FIXME: Onresize not working
+    // FIXME: Onresize not working, maybe it shoudnt
     onContentResize(e) {
         if (isYoutubeContent(e.content)) {
-            console.log('Resizing Content:', e.content, e.content.index);
             e.preventDefault();
-
-            // FIXME: this below seems to be useless
-            if (e.content.element) {
-                // Set width and height to 100% to fill the parent container
-                e.content.element.style.width = '100%';
-                e.content.element.style.height = '100%';
-            }
         }
     }
 
@@ -181,6 +157,7 @@ class YoutubeVideoSetup{
     }
 
     /* Player / YouTube */
+
     playVideo(content) {
         if (content.element && content.element.play) {
             content.element.play();
@@ -194,19 +171,19 @@ class YoutubeVideoSetup{
     }
 
     loadYouTubeVideo(content) {
-        this.loadYouTubeAPI().then(() => {
-            // Create the player content
-            const playerContainer = document.createElement('div');
-            playerContainer.id = 'pswp-youtube-player-' + content.index;
-            const videoId = this.extractYouTubeVideoId(content.data.videoSrc || content.data.src);
+        // Create the player content
+        const playerContainer = document.createElement('div');
+        playerContainer.id = 'pswp-youtube-player-' + content.index;
+        // Append the player container to the slide container immediately
+        content.element = playerContainer;
 
+        this.loadYouTubeAPI().then(() => {
+            const videoId = this.extractYouTubeVideoId(content.data.videoSrc || content.data.src);
             if (!videoId) {
                 content.onError();
                 return;
             }
 
-            // Append the player container to the slide container immediately
-            content.element = playerContainer;
             if (!content.slide) {
                 content.status = 'not-appended';
                 return;
