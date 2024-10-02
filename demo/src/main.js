@@ -1,5 +1,6 @@
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import PhotoSwipeYoutubePlugin from 'photo-swipe-youtube-plugin';
+import PhotoSwipeVimeoPlugin from 'photo-swipe-vimeo-plugin';
 
 import 'photoswipe/dist/photoswipe.css';
 
@@ -10,8 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
         pswpModule: () => import('photoswipe'),
     });
 
-    const videoPlugin = new PhotoSwipeYoutubePlugin(lightbox, {
+    const youtube = new PhotoSwipeYoutubePlugin(lightbox, {
         youtubeAttributes: {
+            autoplay: false
+        },
+    });
+
+    const vimeo = new PhotoSwipeVimeoPlugin(lightbox, {
+        vimeoAttributes: {
             autoplay: false
         },
     });

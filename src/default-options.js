@@ -7,6 +7,12 @@ export const defaultOptions = {
         autoplay: false,
         rel: false
     },
+    // Vimeo Options
+    vimeoAttributes: {
+        autoplay: false,
+        loop: false,
+        controls: true,
+    },
     playOnActivate: true, // Only starts the video when the slide is activated
     stopOnDeactivate: true, // Stops the video when the slide is deactivated
 

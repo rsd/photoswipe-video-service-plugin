@@ -1,11 +1,14 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/main.js',
+    entry: {
+        PhotoSwipeYoutubePlugin: './src/main-youtube.js',
+        PhotoSwipeVimeoPlugin: './src/main-vimeo.js',
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'PhotoSwipeYoutubePlugin',
+        library: '[name]',
         libraryTarget: 'umd',
         globalObject: 'this',
     },

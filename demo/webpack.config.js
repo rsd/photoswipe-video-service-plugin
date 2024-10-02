@@ -38,8 +38,14 @@ module.exports = {
         compress: true,
     },
     resolve: {
+        modules: [
+            path.resolve(__dirname, 'src'),
+            path.resolve(__dirname, '../src'), // Include parent src directory
+            'node_modules',
+        ],
         alias: {
-            'photo-swipe-youtube-plugin': path.resolve(__dirname, '../dist/bundle.js'),
+            'photo-swipe-youtube-plugin': path.resolve(__dirname, '../dist/PhotoSwipeYoutubePlugin.js'),
+            'photo-swipe-vimeo-plugin': path.resolve(__dirname, '../dist/PhotoSwipeVimeoPlugin.js'),
         },
     },
 };
