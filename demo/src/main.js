@@ -1,6 +1,10 @@
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import PhotoSwipeYoutubePlugin from 'photo-swipe-youtube-plugin';
-import PhotoSwipeVimeoPlugin from 'photo-swipe-vimeo-plugin';
+
+// For individual plugins, use the correct class.
+// import PhotoSwipeYoutubePlugin from 'photoswipe-youtube-plugin';
+// import PhotoSwipeVimeoPlugin from 'photoswipe-vimeo-plugin';
+
+import PhotoSwipeVideoServicePlugin from 'photoswipe-video-service-plugin';
 
 import 'photoswipe/dist/photoswipe.css';
 
@@ -11,19 +15,32 @@ document.addEventListener('DOMContentLoaded', () => {
         pswpModule: () => import('photoswipe'),
     });
 
+    // You can either use the Video Service Plugin or the individual YouTube and Vimeo plugins
+    new PhotoSwipeVideoServicePlugin(lightbox, {
+        youtubeAttributes: {
+            autoplay: false,
+        },
+        vimeoAttributes: {
+            autoplay: false,
+        },
+        playOnActivate: true,
+    });
+
+    /* For individual plugins
     const youtube = new PhotoSwipeYoutubePlugin(lightbox, {
         youtubeAttributes: {
             autoplay: false
         },
-        playOnActivate: false,
+        playOnActivate: true,
     });
 
     const vimeo = new PhotoSwipeVimeoPlugin(lightbox, {
         vimeoAttributes: {
             autoplay: false
         },
-        playOnActivate: false,
+        playOnActivate: true,
     });
+    */
 
     lightbox.init();
 });

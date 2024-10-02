@@ -44,8 +44,9 @@ module.exports = {
             'node_modules',
         ],
         alias: {
-            'photo-swipe-youtube-plugin': path.resolve(__dirname, '../dist/PhotoSwipeYoutubePlugin.js'),
-            'photo-swipe-vimeo-plugin': path.resolve(__dirname, '../dist/PhotoSwipeVimeoPlugin.js'),
+            'photoswipe-video-service-plugin': path.resolve(__dirname, '../dist/PhotoSwipeVideoServicePlugin.js'),
+            'photoswipe-youtube-plugin': path.resolve(__dirname, '../dist/PhotoSwipeYoutubePlugin.js'),
+            'photoswipe-vimeo-plugin': path.resolve(__dirname, '../dist/PhotoSwipeVimeoPlugin.js'),
         },
     },
 };

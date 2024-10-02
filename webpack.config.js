@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
+        PhotoSwipeVideoServicePlugin: './src/main-video-service.js',
         PhotoSwipeYoutubePlugin: './src/main-youtube.js',
         PhotoSwipeVimeoPlugin: './src/main-vimeo.js',
     },
