@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const videoPlugin = new PhotoSwipeYoutubePlugin(lightbox, {
-        youtubeAttributes: { autoplay: true},
+        youtubeAttributes: {
+            autoplay: false
+        },
     });
 
     lightbox.init();
