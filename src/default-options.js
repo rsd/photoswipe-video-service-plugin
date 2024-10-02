@@ -7,6 +7,8 @@ export const defaultOptions = {
         autoplay: false,
         rel: false
     },
+    playOnActivate: true, // Only starts the video when the slide is activated
+    stopOnDeactivate: true, // Stops the video when the slide is deactivated
 
 
     // prevent drag/swipe gesture over the bottom part of video
