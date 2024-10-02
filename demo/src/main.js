@@ -15,12 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
         youtubeAttributes: {
             autoplay: false
         },
+        playOnActivate: false,
     });
 
     const vimeo = new PhotoSwipeVimeoPlugin(lightbox, {
         vimeoAttributes: {
             autoplay: false
         },
+        playOnActivate: false,
     });
 
     lightbox.init();
