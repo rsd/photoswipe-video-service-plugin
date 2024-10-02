@@ -4,138 +4,86 @@
     <meta charset="UTF-8">
     <title>PhotoSwipe Video Service Plugin Demo</title>
     <link rel="icon" href="images/youtube-brands-solid.svg" type="image/svg+xml">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        .photoswipe-wrapper .photoswipe-item {
-            margin-bottom: 20px;
-            display: inline-block;
-            width: 18%;
-            margin-right: 1%;
-        }
-        .photoswipe-wrapper .photoswipe-item:nth-child(5n) {
-            margin-right: 0;
-        }
-        .photoswipe-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-            cursor: pointer;
-        }
-    </style>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<h1>PhotoSwipe Video Service Plugin Demo</h1>
-<div class="photoswipe-wrapper">
+<body class="font-sans p-5">
+<h1 class="text-2xl font-bold mb-5">PhotoSwipe Video Service Plugin Demo</h1>
+<div class="photoswipe-wrapper flex flex-wrap -mx-1">
     <!-- Image Item -->
-    <div class="photoswipe-item">
+    <div class="photoswipe-item w-1/5 px-1 mb-4">
         <a href="images/mala-1.jpg" data-pswp-width="2765" data-pswp-height="2765" data-pswp-type="image">
-            <img src="images/mala-1.jpg" alt="Image description">
+            <img src="images/mala-1.jpg" alt="Image description" class="w-full h-auto cursor-pointer">
         </a>
     </div>
 
     <!-- Image Item -->
-    <div class="photoswipe-item">
+    <div class="photoswipe-item w-1/5 px-1 mb-4">
         <a href="images/mala-2.jpg" data-pswp-width="2765" data-pswp-height="2765" data-pswp-type="image">
-            <img src="images/mala-2.jpg" alt="Image description">
+            <img src="images/mala-2.jpg" alt="Image description" class="w-full h-auto cursor-pointer">
         </a>
     </div>
 
     <!-- Image Item -->
-    <div class="photoswipe-item">
+    <div class="photoswipe-item w-1/5 px-1 mb-4">
         <a href="images/mala-3.jpg" data-pswp-width="1080" data-pswp-height="1080" data-pswp-type="image">
-            <img src="images/mala-3.jpg" alt="Image description">
+            <img src="images/mala-3.jpg" alt="Image description" class="w-full h-auto cursor-pointer">
         </a>
     </div>
 
     <!-- Image Item -->
-    <div class="photoswipe-item">
+    <div class="photoswipe-item w-1/5 px-1 mb-4">
         <a href="images/mala-4.jpg" data-pswp-width="1080" data-pswp-height="1080" data-pswp-type="image">
-            <img src="images/mala-4.jpg" alt="Image description">
+            <img src="images/mala-4.jpg" alt="Image description" class="w-full h-auto cursor-pointer">
         </a>
     </div>
 
     <!-- Image Item -->
-    <div class="photoswipe-item">
+    <div class="photoswipe-item w-1/5 px-1 mb-4">
         <a href="images/mala-5.jpg" data-pswp-width="1080" data-pswp-height="1080" data-pswp-type="image">
-            <img src="images/mala-5.jpg" alt="Image description">
+            <img src="images/mala-5.jpg" alt="Image description" class="w-full h-auto cursor-pointer">
         </a>
     </div>
-
 
     <!-- YouTube Video Item -->
-    <div class="photoswipe-item">
+    <div class="photoswipe-item w-1/5 px-1 mb-4">
         <a href="https://www.youtube.com/watch?v=ax20zcH1pOM" data-pswp-width="1137" data-pswp-height="640" data-pswp-type="youtube">
-            <img src="https://i.ytimg.com/vi/ax20zcH1pOM/maxresdefault.jpg" alt="YouTube Video">
+            <img src="https://i.ytimg.com/vi/ax20zcH1pOM/maxresdefault.jpg" alt="YouTube Video" class="w-full h-auto cursor-pointer">
         </a>
     </div>
 
     <!-- YouTube Video Short Item -->
-    <div class="photoswipe-item">
+    <div class="photoswipe-item w-1/5 px-1 mb-4">
         <a href="https://www.youtube.com/shorts/QQCG6HyhCiY" data-pswp-width="540" data-pswp-height="960" data-pswp-type="youtube">
-            <img src="https://i.ytimg.com/vi/QQCG6HyhCiY/maxres2.jpg" alt="YouTube Video">
+            <img src="https://i.ytimg.com/vi/QQCG6HyhCiY/maxres2.jpg" alt="YouTube Video" class="w-full h-auto cursor-pointer">
         </a>
     </div>
 
     <!-- YouTube Video Item -->
-    <div class="photoswipe-item">
+    <div class="photoswipe-item w-1/5 px-1 mb-4">
         <a href="https://www.youtube.com/watch?v=zSwE4fFc7vk" data-pswp-width="1137" data-pswp-height="640" data-pswp-type="youtube">
-            <img src="https://i.ytimg.com/vi_webp/zSwE4fFc7vk/maxresdefault.webp" alt="YouTube Video">
+            <img src="https://i.ytimg.com/vi_webp/zSwE4fFc7vk/maxresdefault.webp" alt="YouTube Video" class="w-full h-auto cursor-pointer">
         </a>
     </div>
 
     <!-- Vimeo Video Item -->
-    <div class="photoswipe-item">
+    <div class="photoswipe-item w-1/5 px-1 mb-4">
         <a href="https://vimeo.com/987262765" data-pswp-width="1137" data-pswp-height="640" data-pswp-type="vimeo">
-            <img src="https://i.vimeocdn.com/video/1902867105-51f3bb8761ca3277c7e91a5aa006613f727a8a3022d82cd3dd2162903565a7f7-d" alt="Vimeo Video">
+            <img src="https://i.vimeocdn.com/video/1902867105-51f3bb8761ca3277c7e91a5aa006613f727a8a3022d82cd3dd2162903565a7f7-d" alt="Vimeo Video" class="w-full h-auto cursor-pointer">
         </a>
     </div>
 
     <!-- Vimeo Video Item -->
-    <div class="photoswipe-item">
+    <div class="photoswipe-item w-1/5 px-1 mb-4">
         <a href="https://vimeo.com/987262435" data-pswp-width="1137" data-pswp-height="640" data-pswp-type="vimeo">
-            <img src="https://i.vimeocdn.com/video/1902866716-e164e1a5222e1a4955e736a6475e6ce3048a2935860c610788f7ebed0a9669b5-d" alt="Vimeo Video">
+            <img src="https://i.vimeocdn.com/video/1902866716-e164e1a5222e1a4955e736a6475e6ce3048a2935860c610788f7ebed0a9669b5-d" alt="Vimeo Video" class="w-full h-auto cursor-pointer">
         </a>
     </div>
-
 </div>
 
 <!-- PhotoSwipe Core Structure -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
+    <!-- ... existing PhotoSwipe structure ... -->
 </div>
 
 <!-- Include the bundled JavaScript -->

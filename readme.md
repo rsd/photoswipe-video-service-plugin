@@ -17,7 +17,8 @@ enhancing the user experience by providing video playback alongside images.
 
 Install the plugin via npm:
 
-`npm install photoswipe-video-service-plugin`
+`npm install git+https://github.com/rsd/photoswipe-video-service-plugin.git
+`
 
 Or include the script directly in your HTML:
 
