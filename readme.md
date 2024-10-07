@@ -21,9 +21,6 @@ Install the plugin via npm:
 
 Or include the script directly in your HTML:
 
-### umd style
-`<script src="path/to/PhotoSwipeVideoServicePlugin.js"></script>`
-
 ### esd style
 `<script src="path/to/photoswipe-video-service-plugin.esm.js"></script>`
 
