@@ -12,11 +12,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: 'babel-loader',
-            },
-            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
@@ -36,17 +31,5 @@ module.exports = {
         port: 9000,
         open: false,
         compress: true,
-    },
-    resolve: {
-        modules: [
-            path.resolve(__dirname, 'src'),
-            path.resolve(__dirname, '../src'), // Include parent src directory
-            'node_modules',
-        ],
-        alias: {
-            'photoswipe-video-service-plugin': path.resolve(__dirname, '../dist/PhotoSwipeVideoServicePlugin.js'),
-            'photoswipe-youtube-plugin': path.resolve(__dirname, '../dist/PhotoSwipeYoutubePlugin.js'),
-            'photoswipe-vimeo-plugin': path.resolve(__dirname, '../dist/PhotoSwipeVimeoPlugin.js'),
-        },
     },
 };

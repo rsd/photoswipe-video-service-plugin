@@ -5,7 +5,7 @@ import PhotoSwipe from '../../node_modules/photoswipe/dist/photoswipe.esm.js';
 // import PhotoSwipeYoutubePlugin from 'photoswipe-youtube-plugin';
 // import PhotoSwipeVimeoPlugin from 'photoswipe-vimeo-plugin';
 
-import PhotoSwipeVideoServicePlugin from 'photoswipe-video-service-plugin';
+import PhotoSwipeVideoServicePlugin from '../../dist/photoswipe-video-service-plugin.esm.js';
 
 import 'photoswipe/dist/photoswipe.css';
 
