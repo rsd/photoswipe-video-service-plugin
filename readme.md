@@ -17,12 +17,16 @@ enhancing the user experience by providing video playback alongside images.
 
 Install the plugin via npm:
 
-`npm install git+https://github.com/rsd/photoswipe-video-service-plugin.git
-`
+`npm install git+https://github.com/rsd/photoswipe-video-service-plugin.git`
 
 Or include the script directly in your HTML:
 
+### umd style
 `<script src="path/to/PhotoSwipeVideoServicePlugin.js"></script>`
+
+### esd style
+`<script src="path/to/photoswipe-video-service-plugin.esm.js"></script>`
+
 
 ### JavaScript
 
@@ -62,21 +66,21 @@ Structure your gallery items with links to YouTube and Vimeo videos.
 <div class="photoswipe-wrapper">
     <!-- YouTube Video -->
     <div class="photoswipe-item">
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID" data-type="youtube">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" data-pswp-type="youtube" data-pswp-width="WIDTH" data-pswp-height="HEIGHT">
             <img src="youtube-thumbnail.jpg" alt="YouTube Video">
         </a>
     </div>
 
     <!-- Vimeo Video -->
     <div class="photoswipe-item">
-        <a href="https://vimeo.com/VIDEO_ID" data-type="vimeo">
+        <a href="https://vimeo.com/VIDEO_ID" data-pswp-type="vimeo" data-pswp-width="WIDTH" data-pswp-height="HEIGHT">
             <img src="vimeo-thumbnail.jpg" alt="Vimeo Video">
         </a>
     </div>
 
     <!-- Image -->
     <div class="photoswipe-item">
-        <a href="path/to/image.jpg">
+        <a href="path/to/image.jpg" data-pswp-type="image" data-pswp-width="WIDTH" data-pswp-height="HEIGHT">
             <img src="image-thumbnail.jpg" alt="Image">
         </a>
     </div>
@@ -87,9 +91,8 @@ Structure your gallery items with links to YouTube and Vimeo videos.
 
 You can customize the plugin using the following options:
 
-- `services`: An object containing service-specific options.
-  - `youtube`: Options for YouTube videos.
-  - `vimeo`: Options for Vimeo videos.
+- `youtubeAttributes`: Options for YouTube videos.
+- `vimeoAttributes`: Options for Vimeo videos.
 - `playOnActivate` (boolean): Whether to play the video automatically when activated.
 - `stopOnDeactivate` (boolean): Whether to pause the video when deactivated.
 
@@ -97,17 +100,15 @@ You can customize the plugin using the following options:
 
 ```javascript
 new PhotoSwipeVideoServicePlugin(lightbox, {
-    services: {
-        youtube: {
-            autoplay: true,
-            controls: true,
-            rel: false,
-        },
-        vimeo: {
-            autoplay: true,
-            loop: false,
-            controls: true,
-        },
+    youtubeAttributes: {
+        autoplay: true,
+        controls: true,
+        rel: false,
+    },
+    vimeoAttributes: {
+        autoplay: true,
+        loop: false,
+        controls: true,
     },
     playOnActivate: true,
     stopOnDeactivate: true,
