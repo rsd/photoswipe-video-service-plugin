@@ -28,6 +28,7 @@ Or include the script directly in your HTML:
 
 ```javascript
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import PhotoSwipe from '../../node_modules/photoswipe/dist/photoswipe.esm.js';
 import PhotoSwipeVideoServicePlugin from 'photoswipe-video-service-plugin';
 
 import 'photoswipe/dist/photoswipe.css';
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightbox = new PhotoSwipeLightbox({
     gallery: '.photoswipe-wrapper',
     children: '.photoswipe-item a',
-    pswpModule: () => import('photoswipe'),
+    pswpModule: () => PhotoSwipe,
   });
 
   new PhotoSwipeVideoServicePlugin(lightbox, {

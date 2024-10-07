@@ -1,4 +1,5 @@
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import PhotoSwipe from '../../node_modules/photoswipe/dist/photoswipe.esm.js';
 
 // For individual plugins, use the correct class.
 // import PhotoSwipeYoutubePlugin from 'photoswipe-youtube-plugin';
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightbox = new PhotoSwipeLightbox({
         gallery: '.photoswipe-wrapper',
         children: '.photoswipe-item a',
-        pswpModule: () => import('photoswipe'),
+        pswpModule: () => PhotoSwipe,
     });
 
     // You can either use the Video Service Plugin or the individual YouTube and Vimeo plugins
